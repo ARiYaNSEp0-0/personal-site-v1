@@ -6,10 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import pic1 from "../../assets/demo-images/sidebar.png";
-import pic2 from "../../assets/demo-images/ecommerce.png";
-import pic3 from "../../assets/demo-images/hoc.png";
-import pic4 from "../../assets/demo-images/musicapp.png";
+import pic1 from "../../assets/images/sidebar.png";
+import pic2 from "../../assets/images/ecommerce.png";
+import pic3 from "../../assets/images/hoc.png";
+import pic4 from "../../assets/images/musicapp.png";
 
 import { Navigation } from "swiper/modules";
 

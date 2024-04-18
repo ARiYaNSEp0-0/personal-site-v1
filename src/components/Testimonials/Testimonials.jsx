@@ -1,10 +1,10 @@
 import { Heading, Paragraph } from "../index";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import pic1 from "../../assets/demo-images/profile1.jpg";
-import pic2 from "../../assets/demo-images/profile2.jpg";
-import pic3 from "../../assets/demo-images/profile3.jpg";
-import pic4 from "../../assets/demo-images/profile4.jpg";
+import pic1 from "../../assets/images/profile1.jpg";
+import pic2 from "../../assets/images/profile2.jpg";
+import pic3 from "../../assets/images/profile3.jpg";
+import pic4 from "../../assets/images/profile4.jpg";
 
 import "./Testimonials.css";
 import { Pagination } from "swiper/modules";
