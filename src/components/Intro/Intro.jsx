@@ -2,11 +2,9 @@ import { CallToAction, Heading, Blur, Paragraph } from "../index";
 
 import bloblBack from "../../assets/images/Path 4.svg";
 import blobFront from "../../assets/images/Path 5.svg";
-import person from "../../assets/images/person.png";
+import person from "../../assets/images/person.webp";
 
 import "./Intro.css";
-
-import { motion } from "framer-motion";
 
 const Intro = () => {
   const transition = { duration: 1, type: "spring" };
@@ -32,7 +30,7 @@ const Intro = () => {
           {/* initial={{ transform: " translate3d(-40%, 0, 0)" }}
             whileInView={{ transform: "translate3d(0,0,0)" }}
             transition={transition} */}
-          <motion.div className="introduction__visual flex-center">
+          <div className="introduction__visual flex-center">
             <img className="blob--back" src={bloblBack} alt="" />
             <img className="blob--front" src={blobFront} alt="" />
             <img className="person" src={person} alt="" />
@@ -53,7 +51,7 @@ const Intro = () => {
               y="65%"
               blur="60px"
             /> */}
-          </motion.div>
+          </div>
         </div>
       </div>
     </header>

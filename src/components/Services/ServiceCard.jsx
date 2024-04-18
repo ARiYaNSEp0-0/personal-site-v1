@@ -1,5 +1,4 @@
 import { Heading, Button, Paragraph } from "../index";
-import { motion } from "framer-motion";
 
 const ServiceCard = ({ title, icon, description }) => {
   // const transition = { duration: 2, type: "spring" };
@@ -14,14 +13,14 @@ const ServiceCard = ({ title, icon, description }) => {
   // }}
   // transition={transition}
   return (
-    <motion.li className="service-card flow-content--vertical">
+    <li className="service-card flow-content--vertical">
       {icon}
       <Heading level="h3" className="sub-heading">
         {title}
       </Heading>
       <Paragraph>{description}</Paragraph>
       <Button className="service-card__btn">اطلاعات بیشتر</Button>
-    </motion.li>
+    </li>
   );
 };
 
