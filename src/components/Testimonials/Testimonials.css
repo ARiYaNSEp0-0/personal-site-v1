@@ -1,0 +1,32 @@
+.testimonials {
+  position: relative;
+}
+
+.testimonials__slider {
+  margin-top: 3rem;
+}
+
+.testimonials__slide {
+  max-width: 50rem;
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.26);
+  border: 7px solid var(--clr-primary-600);
+  border-radius: 20px;
+}
+
+.testimonials__slide > img {
+  height: 105px;
+  width: 105px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.testimonials__slide > p {
+  color: var(--clr-neutral-400);
+}

@@ -1,0 +1,23 @@
+.footer {
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+  position: relative;
+  margin-top: 5rem;
+}
+
+[class*="footer__wave"] {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.footer .footer__wave-back {
+  left: 25%;
+}
+
+.footer__inner {
+  padding: 3rem;
+  gap: 3rem;
+}
+

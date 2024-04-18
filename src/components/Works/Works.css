@@ -1,0 +1,31 @@
+.works__intro {
+  text-align: center;
+}
+
+.works__slider {
+  user-select: none;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.mySwiper .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}

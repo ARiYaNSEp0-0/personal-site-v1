@@ -1,0 +1,43 @@
+.contact__inner {
+  gap: 4rem;
+}
+
+.contact__form {
+  position: relative;
+}
+
+.contact__form > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+[class*="contact__input"] {
+  padding: 1rem 1.5rem;
+  border: 3px solid var(--clr-primary-600);
+  border-radius: 10px;
+}
+
+.contact__input-message {
+  max-height: 10rem;
+  resize: vertical;
+}
+
+.contact__submit {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 64em) {
+  .contact__inner {
+    gap: 0;
+  }
+  .contact__submit {
+    align-self: center;
+  }
+}

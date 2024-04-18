@@ -1,0 +1,20 @@
+.theme-toggle {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+@media (hover: hover) {
+  .theme-toggle.theme-dark:hover {
+    background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
+  }
+
+  .theme-toggle.theme-light:hover {
+    background-color: var(--clr-primary-300);
+    color: var(--clr-neutral-900);
+  }
+}

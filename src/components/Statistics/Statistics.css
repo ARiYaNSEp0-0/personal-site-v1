@@ -1,0 +1,35 @@
+.statistics__list {
+  text-align: center;
+  gap: 5rem;
+}
+
+.statistics__list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statistics__value {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--clr-neutral-200);
+  position: relative;
+}
+
+.statistics__value::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    180deg,
+    var(--clr-primary-300),
+    var(--clr-primary-600)
+  );
+  position: absolute;
+  z-index: -1;
+}

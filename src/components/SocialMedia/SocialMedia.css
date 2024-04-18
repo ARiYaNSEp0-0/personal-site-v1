@@ -1,0 +1,24 @@
+.social-media {
+  
+}
+
+.social-media--vertical > .social-media__list {
+  flex-direction: column;
+}
+
+.social-media--horizontal > .social-media__list {
+  flex-direction: row;
+}
+
+.social-media__list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-media__list > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

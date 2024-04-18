@@ -1,0 +1,11 @@
+.blur {
+  position: absolute;
+  width: var(--w, 1rem);
+  height: var(--h, 1rem);
+  border-radius: 50%;
+  z-index: -99999999;
+  top: var(--y, 1rem);
+  right: var(--x, 1rem);
+  filter: blur(var(--blur, 1rem));
+  background-color: var(--clr, red);
+}

@@ -1,0 +1,47 @@
+.cta-button {
+  --tr-duration: 0.35s;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 2.5rem;
+  border-radius: 35px;
+  background-image: var(--btn-cta-gradient);
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+  position: relative;
+  z-index: 0;
+  border: 1px solid transparent;
+  transition: color var(--tr-duration) ease,
+    background-color var(--tr-duration) ease,
+    border-color var(--tr-duration) ease, transform var(--tr-duration) ease;
+}
+
+/* rounded shadow below call to action buttons/links */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--btn-cta-shadow);
+  transition: box-shadow var(--tr-duration) ease;
+}
+
+@media (hover: hover) {
+  /* call to action button/link hover effect */
+  .cta-button:hover {
+    background-image: none;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary-600);
+    border-color: var(--clr-primary-600);
+    transform: translate3d(0, 7px, 0px);
+  }
+
+  .cta-button:hover::before {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+}
