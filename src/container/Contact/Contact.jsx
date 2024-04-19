@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
-import { Heading, Blur, CallToAction } from "../index";
+import { Heading, CallToAction } from "../../components/index";
 
 import emailjs from "@emailjs/browser";
 
-import "./ContactForm.css";
+import "./Contact.css";
 
-const ContactForm = () => {
+const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -35,11 +35,11 @@ const ContactForm = () => {
   };
   return (
     <section className="contact">
-      <div className="container container-md">
+      <div className="container container-md" id="contact">
         <div className="contact__inner equal-columns">
           <div className="contact__intro">
             <Heading level="h2" className="section-heading">
-              شما می توانید با <span>من در تماس  باشید !</span>
+              شما می توانید با <span>من در تماس باشید !</span>
             </Heading>
           </div>
           <div className="contact__form">
@@ -93,14 +93,6 @@ const ContactForm = () => {
                 {isMessageSent ? "پیام فرستاده شد" : "فرستادن پیام"}
               </CallToAction>
             </form>
-            {/* <Blur
-              blur={"60px"}
-              color={"rgb(238 210 255)"}
-              height={"40%"}
-              width={"100%"}
-              x={"20%"}
-              y={"30%"}
-            /> */}
           </div>
         </div>
       </div>
@@ -108,4 +100,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;

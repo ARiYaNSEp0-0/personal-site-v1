@@ -1,14 +1,13 @@
 import { useContext, useEffect } from "react";
-import { themeContext } from "../../context";
-import { Button } from "../index";
-
 import { FiSun, FiMoon } from "react-icons/fi";
 
+import { ThemeContext } from "./context";
+import { Button } from "../index";
 import "./ThemeToggle.css";
 
 const ThemeToggle = () => {
-  const theme = useContext(themeContext);
-  const isThemeDark = theme.state.mode === "dark";
+  const theme = useContext(ThemeContext);
+  const isThemeDark = theme.state === "dark";
 
   const changeThemeToDark = () => {
     theme.dispatch({ type: "DARK_THEME_ENABLED" });

@@ -1,4 +1,4 @@
-import Heading from "../Heading/Heading";
+import { Heading } from "../../components";
 
 import "./Works.css";
 
@@ -16,7 +16,7 @@ import { Navigation } from "swiper/modules";
 const Works = () => {
   return (
     <section className="works">
-      <div className="container container-md">
+      <div className="container container-md" id="portfolio">
         <div className="works__inner">
           <div className="works__intro">
             <Heading level="h2" className="section-heading">
@@ -25,7 +25,6 @@ const Works = () => {
           </div>
           <div className="works__slider">
             <Swiper
-              
               navigation={true}
               modules={[Navigation]}
               className="mySwiper"

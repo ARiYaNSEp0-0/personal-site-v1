@@ -1,3 +1,7 @@
+.services {
+  perspective: 500px;
+}
+
 .services__inner {
   gap: 5rem;
 }
@@ -17,7 +21,11 @@
   gap: 2rem;
 }
 
+
 .service-card {
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
   background: rgba(255, 255, 255, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3px);

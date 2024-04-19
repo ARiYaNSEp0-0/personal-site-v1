@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { SocialMedia } from "../index";
+import { SocialMedia } from "../../components";
 
 import wave1 from "../../assets/images/wave-1.svg";
 import wave2 from "../../assets/images/wave-3.svg";

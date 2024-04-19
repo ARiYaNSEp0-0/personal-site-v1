@@ -2,35 +2,39 @@ import { useEffect, useState } from "react";
 
 import "./Navbar.css";
 
-import {
-  Logo,
-  ThemeToggle,
-  CallToAction,
-  NavbarList,
-  Button,
-} from "../index.js";
+import NavbarList from "./NavbarList";
+import { Logo, ThemeToggle, CallToAction, Button } from "../../components";
 
 import { CiMenuKebab } from "react-icons/ci";
 import { HiX } from "react-icons/hi";
 
+// primary navigation at start.
 const Navbar = () => {
+  // for controlling mobile navigation menu open/close state
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
-  // hide/unhide navigation-bar for touch screen devices (mobile, tablet, ...)
-  const handleToggleMobileNav = () => {
-    setIsMobileNavOpen((prev) => !prev);
-  };
+  // for pages in navigation-bar menu
+  const [pages, setPages] = useState([]);
 
   useEffect(() => {
-    document.body.style.overflowY = isMobileNavOpen ? "hidden" : "visible";
-  }, [isMobileNavOpen]);
-  const pages = [
-    { id: 1, path: "#home", text: "خانه" },
-    { id: 2, path: "#services", text: "خدمات" },
-    { id: 3, path: "#experience", text: "تجربه" },
-    { id: 4, path: "#portfolio", text: "نمونه کار ها" },
-    { id: 5, path: "#testimonial", text: "رضایت مشتری" },
-  ];
+    // fetching pages from api
+    fetch("/api/pages")
+      .then((res) => res.json())
+      .then((pages) => setPages(pages))
+      .catch((err) => console.log(err));
+  }, []);
+
+  // close mobile nav
+  const closeMobileNav = () => {
+    document.body.style.overflowY = "visible";
+    setIsMobileNavOpen(false);
+  };
+
+  // open mobile nav
+  const openMobileNav = () => {
+    document.body.style.overflowY = "hidden";
+    setIsMobileNavOpen(true);
+  };
 
   return (
     <nav className="navigation-bar">
@@ -48,7 +52,7 @@ const Navbar = () => {
             {!isMobileNavOpen ? (
               <Button
                 className="navigation-bar__toggle--open flex-center"
-                onClick={handleToggleMobileNav}
+                onClick={openMobileNav}
               >
                 منو
                 <CiMenuKebab />
@@ -56,7 +60,7 @@ const Navbar = () => {
             ) : (
               <Button
                 className="navigation-bar__toggle--close flex-center"
-                onClick={handleToggleMobileNav}
+                onClick={closeMobileNav}
               >
                 بستن
                 <HiX />
@@ -67,10 +71,11 @@ const Navbar = () => {
               <div className="navigation-bar__dropdown">
                 <div className="container">
                   <div className="navigation-bar__dropdown-inner flow-content--vertical">
-                    <NavbarList list={pages} />
+                    <NavbarList list={pages} onClick={closeMobileNav} />
                     <CallToAction
                       href="#contact"
                       className="flow-content--large"
+                      onClick={closeMobileNav}
                     >
                       مشاوره بگیر
                     </CallToAction>

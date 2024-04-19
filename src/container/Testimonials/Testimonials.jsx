@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from "../index";
+import { Heading, Paragraph } from "../../components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import pic1 from "../../assets/images/profile1.jpg";
@@ -35,7 +35,7 @@ const Testimonials = () => {
   ];
   return (
     <section className="testimonials">
-      <div className="container container-md">
+      <div className="container container-md" id="testimonials">
         <div className="testimonials__inner">
           <div className="testimonials__intro">
             <Heading level="h2" className="section-heading">
@@ -47,6 +47,7 @@ const Testimonials = () => {
             <Swiper
               modules={[Pagination]}
               slidesPerView={1}
+              spaceBetween={30}
               pagination={{ clickable: true }}
             >
               {clients.map((client) => (
