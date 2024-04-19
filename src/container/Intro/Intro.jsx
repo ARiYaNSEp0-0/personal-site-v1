@@ -1,5 +1,4 @@
 import { CallToAction, Heading, Paragraph } from "../../components";
-import { motion } from "framer-motion";
 import bloblBack from "../../assets/images/Path 4.svg";
 import blobFront from "../../assets/images/Path 5.svg";
 import person from "../../assets/images/person.webp";
@@ -27,25 +26,9 @@ const Intro = () => {
           </div>
 
           <div className="introduction__visual flex-center">
-            <motion.img
-              className="blob--back"
-              src={bloblBack}
-              alt=""
-              transition={{ type: "spring", duration: 8 }}
-              initial={{ transform: " translate3d(20%, 0, 0) scale(0.8)" }}
-              whileInView={{ transform: " translate3d(-50%, 0, 0) scale(0.8)" }}
-            />
+            <img className="blob--back" src={bloblBack} alt="" />
             <img className="blob--front" src={blobFront} alt="" />
-            <motion.img
-              className="person"
-              src={person}
-              alt="person logo."
-              transition={{ type: "spring", duration: 8 }}
-              initial={{ transform: "translate3d(-50%, -9%, 0) scale(.8)" }}
-              whileInView={{
-                transform: "translate3d(-50%, -30%, 0) scale(0.52)",
-              }}
-            />
+            <img className="person" src={person} alt="person logo." />
           </div>
         </div>
       </div>
