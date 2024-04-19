@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "./Navbar.css";
 
@@ -14,15 +14,12 @@ const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // for pages in navigation-bar menu
-  const [pages, setPages] = useState([]);
-
-  useEffect(() => {
-    // fetching pages from api
-    fetch("/api/pages")
-      .then((res) => res.json())
-      .then((pages) => setPages(pages))
-      .catch((err) => console.log(err));
-  }, []);
+  const pages = [
+    { id: 1, path: "#home", text: "خانه" },
+    { id: 2, path: "#services", text: "خدمات" },
+    { id: 4, path: "#portfolio", text: "نمونه کار ها" },
+    { id: 5, path: "#testimonials", text: "رضایت مشتری" },
+  ];
 
   // close mobile nav
   const closeMobileNav = () => {

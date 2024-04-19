@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import { Heading, CallToAction, Paragraph } from "../../components";
 
 import { MdDesignServices, MdCode, MdSearch } from "react-icons/md";
@@ -11,7 +9,29 @@ import resume from "../../assets/resume.pdf";
 import "./Services.css";
 
 const Services = () => {
-  const [services, setServices] = useState([]);
+  const services = [
+    {
+      id: 1,
+      title: "طراحی",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم",
+      iconType: "design",
+    },
+    {
+      id: 2,
+      title: "توسعه",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم",
+      iconType: "code",
+    },
+    {
+      id: 3,
+      title: "بهینه سازی موتور های جست و جو",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم",
+      iconType: "seo",
+    },
+  ];
 
   const serviceIconTypes = {
     design: <MdDesignServices />,
@@ -19,16 +39,8 @@ const Services = () => {
     seo: <MdSearch />,
   };
 
-  useEffect(() => {
-    // fetching services from api
-    fetch("/api/services")
-      .then((res) => res.json())
-      .then((services) => setServices(services))
-      .catch((err) => console.log(err));
-  }, []);
-
   return (
-    <section className="services" >
+    <section className="services">
       <div className="container container-md" id="services">
         <div className="services__inner equal-columns">
           <div className="services__text flow-content--vertical">
