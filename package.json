@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --open",
-    "build": "node api/server.js && vite build",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node api/server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
