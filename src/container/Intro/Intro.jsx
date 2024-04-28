@@ -1,4 +1,12 @@
-import { CallToAction, Heading, Paragraph } from "../../components";
+import {
+  CallToAction,
+  Heading,
+  Paragraph,
+  SocialMedia,
+} from "../../components";
+
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+
 import bloblBack from "../../assets/images/Path 4.svg";
 import blobFront from "../../assets/images/Path 5.svg";
 import person from "../../assets/images/person.webp";
@@ -6,6 +14,15 @@ import person from "../../assets/images/person.webp";
 import "./Intro.css";
 
 const Intro = () => {
+  const introSocials = [
+    {
+      id: 1,
+      address: "https://github.com/ARiYaNSEp0-0",
+      icon: <FaGithub size={"2rem"} />,
+    },
+    { id: 2, address: "#", icon: <FaLinkedin size={"2rem"} /> },
+    { id: 3, address: "#", icon: <FaWhatsapp size={"2rem"} /> },
+  ];
   return (
     <header className="introduction">
       <div className="container container-lg">
@@ -30,6 +47,8 @@ const Intro = () => {
             <img className="blob--front" src={blobFront} alt="" />
             <img className="person" src={person} alt="person logo." />
           </div>
+
+          <SocialMedia direction="vertical" socials={introSocials} />
         </div>
       </div>
     </header>
