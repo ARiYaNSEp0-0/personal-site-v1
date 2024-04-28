@@ -1,5 +1,7 @@
-.social-media {
-  
+.social-media[class*="social-media--"] {
+  flex: 0 1 auto;
+  position: relative;
+  z-index: 10000;
 }
 
 .social-media--vertical > .social-media__list {
@@ -12,8 +14,10 @@
 
 .social-media__list {
   display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
 }
 
 .social-media__list > li > a {
