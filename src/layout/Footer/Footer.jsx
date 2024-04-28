@@ -3,12 +3,26 @@ import { SocialMedia } from "../../components";
 
 import wave1 from "../../assets/images/wave-1.svg";
 import wave2 from "../../assets/images/wave-3.svg";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTelegram,
+  FaWhatsapp,
+} from "react-icons/fa";
+
 const Footer = () => {
   const footerSocials = [
     { id: 1, address: "#", icon: <FaInstagram size={"2rem"} /> },
-    { id: 2, address: "#", icon: <FaGithub size={"2rem"} /> },
+    {
+      id: 2,
+      address: "https://github.com/ARiYaNSEp0-0",
+      icon: <FaGithub size={"2rem"} />,
+    },
     { id: 3, address: "#", icon: <FaLinkedin size={"2rem"} /> },
+    { id: 4, address: "#", icon: <FaWhatsapp size={"2rem"} /> },
+    { id: 5, address: "#", icon: <FaTelegram size={"2rem"} /> },
   ];
   return (
     <footer className="footer">
