@@ -57,7 +57,7 @@ const Services = () => {
               download="ariyan-sepahi-resume"
               className="flow-content--medium"
             >
-              دانلود رزومه سمپل
+              دانلود رزومه
             </CallToAction>
           </div>
           <div className="cards">
